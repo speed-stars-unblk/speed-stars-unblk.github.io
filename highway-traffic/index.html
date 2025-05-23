@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highway Traffic Unblocked | Free Online Racing Game | Speed Stars</title>
+    <meta name="description" content="Play Highway Traffic Unblocked - the ultimate high-speed racing challenge. Dodge traffic, avoid collisions, and reach the finish line in this exciting car game.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Highway Traffic Unblocked | Free Online Racing Game">
+    <meta property="og:description" content="Test your reflexes in Highway Traffic - the unblocked racing game where you navigate through busy traffic at high speeds. Perfect for school or work breaks.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://speed-stars-unblk.github.io/highway-traffic">
+    <meta property="og:image" content="https://speed-stars-unblk.github.io/images/highway-traffic.png">
+    <meta property="og:site_name" content="Speed Stars Unblocked">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highway Traffic Unblocked | Free Online Racing Game">
+    <meta name="twitter:description" content="Play Highway Traffic Unblocked - dodge cars, avoid crashes, and race to the finish in this exciting traffic-dodging game.">
+    <meta name="twitter:image" content="https://speed-stars-unblk.github.io/images/highway-traffic.png">
+    
+    <!-- Other Meta Tags -->
+    <meta name="keywords" content="highway traffic unblocked, traffic racing game, car dodging game, highway traffic github, school games unblocked, racing game free, traffic avoidance game, speed stars games">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Speed Stars Unblocked">
+    <meta name="theme-color" content="#ff5500">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="web">
+    <meta name="rating" content="general">
+    <meta name="language" content="en">
+    
+    <link rel="canonical" href="https://speed-stars-unblk.github.io/highway-traffic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+    <link rel="shortcut icon" href="https://speed-stars-unblk.github.io/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://speed-stars-unblk.github.io/favicon.ico" type="image/x-icon">
+    
+    <style>
+        :root {
+            --primary: #ff5500;
+            --primary-light: #ff8c00;
+            --primary-dark: #cc4400;
+            --dark: #0f0f15;
+            --darker: #0a0a0f;
+            --light: #f5f5f7;
+            --lighter: #ffffff;
+            --gray: #2a2a35;
+            --light-gray: #3a3a45;
+            --text: #e0e0e0;
+            --text-light: #ffffff;
+            --text-dark: #b0b0b0;
+            --success: #00c853;
+            --warning: #ffab00;
+            --error: #ff3d00;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.15);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.2);
+            --shadow-xl: 0 20px 50px rgba(0,0,0,0.3);
+            
+            --rounded-sm: 4px;
+            --rounded-md: 8px;
+            --rounded-lg: 12px;
+            --rounded-xl: 16px;
+            --rounded-full: 9999px;
+            
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            --nav-width: 300px;
+            --page-padding: 50px;
+            --header-height: 120px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 0 var(--page-padding);
+        }
+        
+        @supports (font-variation-settings: normal) {
+            body { font-family: 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+        
+        a:hover {
+            color: var(--primary-light);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            padding: 1.5rem 0;
+            position: fixed;
+            top: 0;
+            left: var(--page-padding);
+            right: var(--page-padding);
+            z-index: 100;
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Gradient border animation */
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                var(--primary), 
+                var(--primary-light), 
+                var(--primary-dark), 
+                var(--primary));
+            background-size: 300% 100%;
+            animation: gradientFlow 5s ease infinite;
+        }
+        
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .header-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .logo-container {
+            width: 100%;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            height: 70px;
+            width: auto;
+        }
+        
+        .logo-text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            line-height: 1;
+        }
+        
+        .logo-tagline {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Sidebar Navigation */
+        .nav-container {
+            width: var(--nav-width);
+            background-color: var(--darker);
+            position: fixed;
+            top: var(--header-height);
+            left: var(--page-padding);
+            bottom: 0;
+            z-index: 90;
+            box-shadow: var(--shadow-md);
+            padding: 1rem 0;
+            overflow-y: auto;
+            transition: var(--transition);
+        }
+        
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            padding: 0 1rem;
+        }
+        
+        .nav-item {
+            color: var(--text);
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: var(--rounded-md);
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .nav-item i {
+            font-size: 0.9rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .nav-item:hover, .nav-item.active {
+            background-color: rgba(255, 85, 0, 0.1);
+            color: var(--primary);
+        }
+        
+        .nav-item.active {
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: var(--nav-width);
+            margin-top: var(--header-height);
+            min-height: calc(100vh - var(--header-height));
+            padding: 2rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: calc(1400px - var(--nav-width));
+            margin: 0 auto;
+        }
+        
+        /* Game Section */
+        .game-section {
+            padding: 2rem 0;
+        }
+        
+        .game-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .game-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .game-subtitle {
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .pre-frame-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .pre-frame-box {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .pre-frame-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .game-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        /* Game Frame */
+        .game-frame-container {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            min-height: 500px;
+            border-radius: var(--rounded-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            background-color: var(--darker);
+            border: 2px solid var(--gray);
+            margin-bottom: 2rem;
+        }
+        
+        .game-frame-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(15,15,21,0.9), rgba(10,10,15,0.95));
+            z-index: 10;
+            gap: 1.5rem;
+        }
+        
+        .game-frame-overlay.hidden {
+            display: none;
+        }
+        
+        .game-preview {
+            max-width: 80%;
+            max-height: 50%;
+            object-fit: contain;
+            border-radius: var(--rounded-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Game Controls */
+        .game-controls {
+            display: none;
+            background-color: var(--gray);
+            padding: 1rem;
+            border-radius: var(--rounded-md);
+            margin-bottom: 2rem;
+        }
+        
+        .controls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .rating-container {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .rating-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .average-rating {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .rating-count {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        /* Buttons */
+        .play-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--rounded-full);
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .play-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .fullscreen-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--rounded-full);
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        
+        .fullscreen-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Game Info */
+        .game-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .game-description {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Features */
+        .game-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        
+        .feature-card {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: var(--rounded-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .feature-icon {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-text {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+        
+        /* How to Play */
+        .how-to-play {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: var(--rounded-lg);
+        }
+        
+        .controls-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .control-item {
+            background-color: var(--light-gray);
+            padding: 1rem;
+            border-radius: var(--rounded-md);
+        }
+        
+        .control-key {
+            display: inline-block;
+            background-color: var(--dark);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--rounded-sm);
+            font-family: monospace;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        /* Similar Games */
+        .similar-games {
+            margin-top: 3rem;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        
+        .game-card {
+            background-color: var(--gray);
+            border-radius: var(--rounded-md);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .game-card-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        
+        .game-card-content {
+            padding: 0.75rem;
+            text-align: center;
+        }
+        
+        .game-card-title {
+            color: white;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        /* Comments */
+        .comments-section {
+            margin-top: 3rem;
+        }
+        
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .comment {
+            background-color: var(--gray);
+            padding: 1.25rem;
+            border-radius: var(--rounded-md);
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .comment-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .comment-date {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+        }
+        
+        .comment-form {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: var(--rounded-lg);
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: var(--light-gray);
+            border: 1px solid var(--gray);
+            border-radius: var(--rounded-md);
+            color: var(--text);
+            font-family: inherit;
+            transition: var(--transition-fast);
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.2);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.875rem;
+            border: none;
+            border-radius: var(--rounded-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--darker);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .footer-link {
+            color: var(--text);
+            transition: var(--transition-fast);
+        }
+        
+        .footer-link:hover {
+            color: var(--primary);
+        }
+        
+        .footer-text {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 110;
+        }
+
+        /* Ad Blocks */
+        .ad-container {
+            background-color: var(--gray);
+            padding: 15px;
+            border-radius: var(--rounded-md);
+            margin-bottom: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .ad-label {
+            font-size: 0.8rem;
+            color: var(--text-dark);
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .games-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            body {
+                padding: 0 30px;
+            }
+            
+            .games-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .game-features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            body {
+                padding: 0 20px;
+            }
+            
+            header {
+                position: static;
+                left: 0;
+                right: 0;
+                height: auto;
+                padding: 1.5rem 0;
+            }
+            
+            .nav-container {
+                width: 100%;
+                position: static;
+                top: auto;
+                left: auto;
+                margin-top: 0;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                margin-top: 0;
+                min-height: 100vh;
+                padding: 1rem 0;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .game-frame-container {
+                height: 60vh;
+                min-height: 400px;
+            }
+            
+            .games-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .pre-frame-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .game-title {
+                font-size: 1.75rem;
+            }
+            
+            .game-frame-container {
+                height: 50vh;
+                min-height: 350px;
+            }
+            
+            .games-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .game-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+            
+            .logo-text-container {
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 0 15px;
+            }
+            
+            .game-title {
+                font-size: 1.5rem;
+            }
+            
+            .play-btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .controls-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .fullscreen-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .game-frame-container {
+                height: 45vh;
+                min-height: 300px;
+            }
+            
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Button (visible on small screens) -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Header - Fixed at the top -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="/" class="logo">
+                    <img src="../images/speed-stars.png" alt="Speed Stars Logo" class="logo-img">
+                    <div class="logo-text-container">
+                        <span class="logo-text">Speed Stars</span>
+                        <span class="logo-tagline">The Ultimate Sprint Racing Challenge</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <div class="nav-container" id="nav-container">
+        <nav class="nav-menu">
+            <a href="/all-games" class="nav-item active"><i class="fas fa-gamepad"></i> All Games</a>
+            <a href="/shooting" class="nav-item"><i class="fas fa-crosshairs"></i> Shooting</a>
+            <a href="/racing" class="nav-item"><i class="fas fa-car"></i> Racing</a>
+            <a href="/sports" class="nav-item"><i class="fas fa-basketball-ball"></i> Sports</a>
+            <a href="/puzzle" class="nav-item"><i class="fas fa-puzzle-piece"></i> Puzzle</a>
+            <a href="/adventure" class="nav-item"><i class="fas fa-mountain"></i> Adventure</a>
+            <a href="/action" class="nav-item"><i class="fas fa-running"></i> Action</a>
+            <a href="/strategy" class="nav-item"><i class="fas fa-chess"></i> Strategy</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <main class="container">
+            <section class="game-section">
+                <!-- Ad Block 1 (ads1) - Above h1 -->
+                <!-- <div class="ad-container">
+                    
+                </div> -->
+
+                <div class="game-header">
+                    <h1 class="game-title">Highway Traffic Unblocked</h1>
+                    <p class="game-subtitle">Navigate through intense highway traffic at high speeds in this thrilling racing challenge</p>
+                </div>
+                
+                <!-- Additional game description before frame -->
+                <div class="pre-frame-content">
+                    <div class="pre-frame-box">
+                        <h3>Master the Art of Traffic Navigation</h3>
+                        <p>Highway Traffic delivers the ultimate high-speed racing experience with precise controls that test your reflexes and decision-making. Dodge incoming vehicles, avoid collisions, and reach the finish line in this intense traffic-dodging game.</p>
+                        <p>With multiple vehicle options and increasingly difficult traffic patterns, every run becomes a unique challenge that pushes your skills to the limit. Can you survive the highway madness?</p>
+                    </div>
+                    <div class="pre-frame-box">
+                        <h3>Why Play Our Unblocked Version?</h3>
+                        <p>Our optimized version runs smoothly on any device, including school Chromebooks with restricted access. No downloads or installations needed - just pure racing action available anytime, anywhere.</p>
+                        <p>Enjoy responsive controls, realistic traffic patterns, and challenging gameplay that will keep you coming back for more. Perfect for quick gaming sessions during breaks.</p>
+                    </div>
+                </div>
+                
+                <!-- Ad Block 2 (ads2) - Above game frame -->
+                <!-- <div class="ad-container">
+                    
+                </div> -->
+                
+                <!-- Game Frame -->
+                <div class="game-frame-container">
+                    <div class="game-frame-overlay" id="gameOverlay">
+                        <img src="../images/highway-traffic.png" alt="Highway Traffic Game Preview" class="game-preview">
+                        <h3>Ready to Brave the Highway?</h3>
+                        <button class="play-btn" id="playButton">
+                            <i class="fas fa-play"></i> START DRIVING
+                        </button>
+                    </div>
+                    <iframe class="game-frame" id="gameFrame" src="about:blank" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Game Controls -->
+                <div class="game-controls" id="gameControls">
+                    <div class="controls-row">
+                        <div class="rating-container">
+                            <div class="rating-header">
+                                <div class="average-rating">4.6</div>
+                                <div>
+                                    <div id="rateYo"></div>
+                                    <div class="rating-count">Based on <span id="ratingCount">892</span> ratings</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="fullscreen-btn" id="fullscreenButton">
+                            <i class="fas fa-expand"></i> Fullscreen
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Game Info -->
+                <div class="game-content">
+                    <div class="game-info">
+                        <div class="game-features">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-car-crash"></i></div>
+                                <h4 class="feature-title">Intense Traffic</h4>
+                                <p class="feature-text">Navigate through increasingly difficult traffic patterns with vehicles coming from all directions at varying speeds.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <h4 class="feature-title">High-Speed Action</h4>
+                                <p class="feature-text">Experience adrenaline-pumping gameplay as your speed increases, testing your reflexes to the limit.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-car-side"></i></div>
+                                <h4 class="feature-title">Multiple Vehicles</h4>
+                                <p class="feature-text">Choose from different cars, each with unique handling characteristics to suit your driving style.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="how-to-play">
+                            <h3><i class="fas fa-gamepad"></i> How to Play</h3>
+                            <div class="controls-list">
+                                <div class="control-item">
+                                    <p><span class="control-key">ARROW KEYS</span> or <span class="control-key">WASD</span> to steer your vehicle</p>
+                                </div>
+                                <div class="control-item">
+                                    <p><span class="control-key">SPACE</span> to brake or slow down</p>
+                                </div>
+                                <div class="control-item">
+                                    <p><span class="control-key">ANTICIPATE</span> traffic patterns to avoid collisions</p>
+                                </div>
+                                <div class="control-item">
+                                    <p><span class="control-key">R</span> to restart the level</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-description">
+                        <h3>About Highway Traffic</h3>
+                        <p>Highway Traffic is the premier unblocked racing game that combines precise vehicle control with intense traffic-dodging action. This version provides complete access to all features without restrictions, allowing you to play anywhere - including school or work networks.</p>
+                        <p>With its simple yet challenging gameplay mechanics, Highway Traffic offers an authentic driving experience that's easy to learn but difficult to master. The progressively difficult levels and various vehicle options ensure endless replay value as you try to beat your high score.</p>
+                    </div>
+                </div>
+                
+                <!-- Similar Games -->
+                <section class="similar-games">
+                    <h2><i class="fas fa-thumbs-up"></i> Similar Games</h2>
+                    
+                    <div class="games-grid">
+                        <a href="https://speed-stars-unblk.github.io/traffic-rider" class="game-card">
+                            <img src="../images/traffic-rider.png" alt="Traffic Rider" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Traffic Rider</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/drift-hunters" class="game-card">
+                            <img src="../images/drift-hunters.png" alt="Drift Hunters" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Drift Hunters</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/slope" class="game-card">
+                            <img src="../images/slope.png" alt="Slope" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Slope</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/tunnel-rush" class="game-card">
+                            <img src="../images/tunnel-rush.png" alt="Tunnel Rush" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Tunnel Rush</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/moto-x3m" class="game-card">
+                            <img src="../images/moto-x3m.png" alt="Moto X3M" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Moto X3M</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/drift-boss" class="game-card">
+                            <img src="../images/drift-boss.png" alt="Drift Boss" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Drift Boss</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/traffic-rush" class="game-card">
+                            <img src="../images/traffic-rush.png" alt="Traffic Rush" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Traffic Rush</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/jelly-truck" class="game-card">
+                            <img src="../images/jelly-truck.png" alt="Jelly Truck" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Jelly Truck</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/earn-to-die" class="game-card">
+                            <img src="../images/earn-to-die.png" alt="Earn To Die" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Earn To Die</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/truck-loader" class="game-card">
+                            <img src="../images/truck-loader.png" alt="Truck Loader" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Truck Loader</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/battle-wheels" class="game-card">
+                            <img src="../images/battle-wheels.png" alt="Battle Wheels" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Battle Wheels</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/raft-wars" class="game-card">
+                            <img src="../images/raft-wars.png" alt="Raft Wars" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Raft Wars</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/hills-of-steel" class="game-card">
+                            <img src="../images/hills-of-steel.png" alt="Hills Of Steel" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Hills Of Steel</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/temple-run-2" class="game-card">
+                            <img src="../images/temple-run-2.png" alt="Temple Run 2" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Temple Run 2</h4>
+                            </div>
+                        </a>
+                        <a href="https://speed-stars-unblk.github.io/subway-surfers" class="game-card">
+                            <img src="../images/subway-surfers.png" alt="Subway Surfers" class="game-card-img">
+                            <div class="game-card-content">
+                                <h4 class="game-card-title">Subway Surfers</h4>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                
+                <!-- Comments -->
+                <section class="comments-section">
+                    <h2><i class="fas fa-comments"></i> Player Comments</h2>
+                    <p>Share your high scores and see what other players think:</p>
+                    
+                    <div class="comments-list" id="commentsSection">
+                        <!-- Comments will be loaded here -->
+                    </div>
+                    
+                    <div class="comment-form">
+                        <h3>Leave Your Comment</h3>
+                        <form id="commentForm">
+                            <div class="form-group">
+                                <label for="commentName" class="form-label">Name</label>
+                                <input type="text" id="commentName" class="form-input" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="commentText" class="form-label">Comment</label>
+                                <textarea id="commentText" class="form-textarea" placeholder="Share your best score and driving tips..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Post Comment</button>
+                        </form>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="/privacy" class="footer-link">Privacy Policy</a>
+                        <a href="/terms" class="footer-link">Terms of Service</a>
+                        <a href="/dmca" class="footer-link">DMCA</a>
+                        <a href="/contact" class="footer-link">Contact</a>
+                    </div>
+                    <p class="footer-text">© <span id="currentYear"></span> Speed Stars Unblocked - All Rights Reserved</p>
+                    <p class="footer-text">Play the best unblocked racing games online for free</p>
+                    <p class="footer-text">This is an unofficial version for educational purposes only</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script>
+        // Initialize star rating with random values
+        $(function () {
+            // Generate random initial rating between 4.0 and 5.0
+            let currentRating = (Math.random() * 1 + 4).toFixed(1);
+            // Generate random rating count between 500 and 2000
+            let ratingCount = Math.floor(Math.random() * 1500) + 500;
+            
+            $("#rateYo").rateYo({
+                rating: currentRating,
+                starWidth: "20px",
+                fullStar: true,
+                onSet: function(rating) {
+                    currentRating = ((currentRating * ratingCount) + rating) / (ratingCount + 1);
+                    currentRating = Math.round(currentRating * 10) / 10;
+                    ratingCount++;
+                    
+                    $(".average-rating").text(currentRating);
+                    $("#ratingCount").text(ratingCount.toLocaleString());
+                    
+                    // Save to localStorage
+                    localStorage.setItem('highwayTrafficRating', currentRating);
+                    localStorage.setItem('highwayTrafficRatingCount', ratingCount);
+                }
+            });
+            
+            // Load from localStorage if available
+            if(localStorage.getItem('highwayTrafficRating')) {
+                currentRating = parseFloat(localStorage.getItem('highwayTrafficRating'));
+                ratingCount = parseInt(localStorage.getItem('highwayTrafficRatingCount'));
+                
+                $(".average-rating").text(currentRating);
+                $("#ratingCount").text(ratingCount.toLocaleString());
+                $("#rateYo").rateYo("rating", currentRating);
+            } else {
+                // Set initial random values
+                $(".average-rating").text(currentRating);
+                $("#ratingCount").text(ratingCount.toLocaleString());
+            }
+        });
+        
+        // Game frame activation
+        document.getElementById('playButton').addEventListener('click', function() {
+            // Hide the overlay
+            document.getElementById('gameOverlay').classList.add('hidden');
+            
+            // Load the game iframe
+            document.getElementById('gameFrame').src = 'https://iframe.unblocked-76-games.org/highway-traffic-main';
+            
+            // Show controls section
+            document.getElementById('gameControls').style.display = 'block';
+            
+            // Focus the iframe for better UX
+            document.getElementById('gameFrame').focus();
+        });
+        
+        // Fullscreen functionality
+        document.getElementById('fullscreenButton').addEventListener('click', function() {
+            const elem = document.getElementById('gameFrame');
+            
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        });
+        
+        // Comment system
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load comments from localStorage
+            loadComments();
+            
+            // Submit comment handler
+            document.getElementById('commentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('commentName').value.trim();
+                const text = document.getElementById('commentText').value.trim();
+                
+                if (name && text) {
+                    addComment(name, text);
+                    document.getElementById('commentName').value = '';
+                    document.getElementById('commentText').value = '';
+                }
+            });
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Mobile menu toggle
+            document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+                document.getElementById('nav-container').classList.toggle('active');
+            });
+        });
+        
+        function addComment(name, text) {
+            const comment = {
+                name: name,
+                text: text,
+                date: new Date().toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'short', 
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                })
+            };
+            
+            // Get existing comments
+            let comments = JSON.parse(localStorage.getItem('highwayTrafficComments') || '[]');
+            
+            // Add new comment
+            comments.unshift(comment); // Add to beginning
+            
+            // Save to localStorage
+            localStorage.setItem('highwayTrafficComments', JSON.stringify(comments));
+            
+            // Refresh comments display
+            loadComments();
+        }
+        
+        function loadComments() {
+            const commentsSection = document.getElementById('commentsSection');
+            const comments = JSON.parse(localStorage.getItem('highwayTrafficComments') || '[]');
+            
+            // Clear existing comments
+            commentsSection.innerHTML = '';
+            
+            // Add each comment
+            comments.forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+                commentDiv.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-author">${comment.name}</div>
+                        <div class="comment-date">${comment.date}</div>
+                    </div>
+                    <div class="comment-text">
+                        ${comment.text}
+                    </div>
+                `;
+                commentsSection.appendChild(commentDiv);
+            });
+            
+            // If no comments, show message
+            if (comments.length === 0) {
+                commentsSection.innerHTML = '<div class="comment"><p>No comments yet. Be the first to comment!</p></div>';
+            }
+        }
+    </script>
+<!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+target="_blank"><img id="licnt2D2F" width="0" height="0" style="border:0" 
+title="LiveInternet"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licnt2D2F").src=
+"https://counter.yadro.ru/hit?t45.1;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet-->
+</body>
+</html>
